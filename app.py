@@ -99,4 +99,24 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     image_caption_app = ImageCaptionApp()
     image_caption_app.show()
+    palette = app.palette()
+
+    darkgrey= '#7393B3'
+    lightblue='#EAEAEA'
+    black='#151a1c'
+    white='#FFFFFF'
+
+    palette.setColor(palette.ColorRole.Window, QColor(black))
+
+    palette.setColor(palette.ColorRole.WindowText, QColor(white)) 
+    palette.setColor(palette.ColorRole.Base, QColor(black))
+    palette.setColor(palette.ColorRole.AlternateBase, QColor(black))
+    palette.setColor(palette.ColorRole.ToolTipBase, QColor(black))
+    palette.setColor(palette.ColorRole.ToolTipText, Qt.GlobalColor.black)
+    palette.setColor(palette.ColorRole.Text, QColor(black))
+    palette.setColor(palette.ColorRole.Button, QColor(black))
+    palette.setColor(palette.ColorRole.ButtonText, Qt.GlobalColor.black)
+    palette.setColor(palette.ColorRole.BrightText, QColor(black))
+    palette.setColor(palette.ColorRole.Link, QColor(lightblue))
+    app.setPalette(palette)
     sys.exit(app.exec())
