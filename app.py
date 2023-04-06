@@ -20,7 +20,7 @@ class ImageCaptionApp(QWidget):
         self.upload_button.clicked.connect(self.upload_image)
         self.save_button.clicked.connect(self.save_image)
         self.color_button.clicked.connect(self.choose_color)
-
+        
         # default color to white
         self.caption_color = QColor(255, 255, 255)
 
@@ -35,7 +35,6 @@ class ImageCaptionApp(QWidget):
         caption_lay.addWidget(self.save_button)
 
         color_lay = QHBoxLayout()
-        color_lay.addWidget(QLabel('Caption Color:'))
         color_lay.addWidget(self.color_button)
 
         main_lay = QVBoxLayout()
